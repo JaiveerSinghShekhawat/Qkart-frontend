@@ -1,11 +1,8 @@
-/* eslint-disable no-unused-vars */
 import Register from "./components/Register";
-import Login  from "./components/Login";
-import Product from "./components/Products";
-// import Checkout from "./components/Checkout";
-// import Thanks from "./components/Thanks"
 import ipConfig from "./ipConfig.json";
-import {Switch, Route} from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
+import Login from "./components/Login";
+import Products from "./components/Products";
 
 export const config = {
   endpoint: `http://${ipConfig.workspaceIp}:8082/api/v1`,
@@ -29,7 +26,7 @@ function App() {
             <Thanks /> */}
           {/* </Route> */}
           <Route path="/">
-            <Product />
+            <Products />
           </Route>
         </Switch>  
     </div>
