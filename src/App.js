@@ -3,7 +3,7 @@ import Register from "./components/Register";
 import Product from "./components/Products";
 import Login from "./components/Login";
 import Checkout from "./components/Checkout";
-// import Thanks from './components/Thanks'
+import Thanks from './components/Thanks'
 import ipConfig from "./ipConfig.json";
 import {Switch,Route,Link} from "react-router-dom";
 
@@ -25,9 +25,9 @@ function App() {
             <Route  path="/checkout">
              <Checkout /> 
             </Route>
-            {/* <Route  path="/Thanks">
+            <Route  path="/Thanks">
              <Thanks /> 
-            </Route> */}
+            </Route>
             <Route  path="/">
              <Product /> 
             </Route>

@@ -8,8 +8,8 @@ import {
 } from "@mui/icons-material";
 import { Button, IconButton, Stack } from "@mui/material";
 import { Box } from "@mui/system";
-import React from "react";
-import { useHistory } from "react-router-dom";
+import React ,{useCallBack}from "react";
+import { useHistory,Link } from "react-router-dom";
 import "./Cart.css";
 
 // Definition of Data Structures used
@@ -64,7 +64,12 @@ export const generateCartItemsFrom = (cartData, productsData) => {
       cartItems.push(value)
     })
 
-    
+    // for(let i=0;i<cartData.length;i++){
+    //   let value=map.get(cartData[i]["productId"]);
+    //   value["quantity"]=cartData[i].qty;
+    //   console.log(value)
+    //   cartItems.push(value)
+    // }
     return cartItems;
 };
 

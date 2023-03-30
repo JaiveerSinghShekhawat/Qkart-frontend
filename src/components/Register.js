@@ -46,6 +46,7 @@ const Register = () => {
 
     let url = config.endpoint;
     console.log(url);
+    
     try {
       let request = await axios.post(`${url}/auth/register`, {
         username: formData.username,
@@ -57,7 +58,8 @@ const Register = () => {
       enqueueSnackbar("Registered successfully", { variant: "success" });
 
       history.push("/login");
-    } catch (e) {
+    } 
+    catch(e) {
       axios
         .post(`${url}/auth/register`, {
           username: formData.username,
